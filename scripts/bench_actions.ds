@@ -9,8 +9,13 @@ WALLET_NAME="bpbenchmarks"
 WALLET_PASS="password to bpbenchmarks wallet with benchmark permission key"
 PATH="$PATH:/usr/local/bin:/usr/local/eosio/bin/"
 
-date
+# timestamp in ISO-8601
+date -u +"%Y-%m-%dT%H:%M:%SZ"
+
 cleos -u "$API_URL" --wallet-url "$WALLET_URL" wallet unlock -n "$WALLET_NAME" --password "$WALLET_PASS"
-cleos -u "$API_URL" --wallet-url "$WALLET_URL" push action bpbenchmarks cpu '' -p bpbenchmarks@benchmark -f
-#cleos -u "$API_URL" --wallet-url "$WALLET_URL" push action bpbenchmarks ram '' -p bpbenchmarks@benchmark -f
+cleos -u "$API_URL" --wallet-url "$WALLET_URL" push action bpbenchmarks cpu '[]' -p bpbenchmarks@active -f
+#cleos -u "$API_URL" --wallet-url "$WALLET_URL" push action bpbenchmarks ram '' -p bpbenchmarks@active -f
 cleos -u "$API_URL" --wallet-url "$WALLET_URL" wallet stop
+
+# add a delimeter for easy processing
+echo "--action--"
