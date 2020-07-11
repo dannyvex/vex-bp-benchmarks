@@ -17,5 +17,5 @@ This benchmark targets VEX RAM by rapidly writing to and reading from a RAM tabl
 --
 
 #### Disclaimer
-*VEX Token holders should not rely on VEX BP benchmark results as an absolute indication of block producers’ performance. Results are mainly intended for operators of the VEX infrastructure to have additional metrics that can aid them in testing different infrastructures, configurations and features while identifying performance differences and potential bottlenecks. These statistics are not subject to verification by other nodes on the network; therefore it is possible for block producers to manipulate them. Furthermore, running custom software or configurations may impact the measurement of these metrics.*
+*VEX Token holders should not rely on VEX BP benchmarks results as an absolute indication of block producers’ performance. Results are mainly intended for operators of the VEX infrastructure to have additional metrics that can aid them in testing different infrastructures, configurations and features while identifying performance differences and potential bottlenecks. These statistics are not subject to verification by other nodes on the network; therefore it is possible for block producers to manipulate them. Furthermore, running custom software or configurations may impact the measurement of these metrics.*
 
