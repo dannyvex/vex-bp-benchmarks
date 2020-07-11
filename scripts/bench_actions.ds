@@ -1,0 +1,16 @@
+#!/bin/sh
+#
+# VEX BP Benchmarks actions script.
+#
+
+API_URL="http://127.0.0.1:8888"
+WALLET_URL="http://127.0.0.1:8900/"
+WALLET_NAME="bpbenchmarks"
+WALLET_PASS="password to bpbenchmarks wallet with benchmark permission key"
+PATH="$PATH:/usr/local/bin:/usr/local/eosio/bin/"
+
+date
+cleos -u "$API_URL" --wallet-url "$WALLET_URL" wallet unlock -n "$WALLET_NAME" --password "$WALLET_PASS"
+cleos -u "$API_URL" --wallet-url "$WALLET_URL" push action bpbenchmarks cpu '' -p bpbenchmarks@benchmark -f
+#cleos -u "$API_URL" --wallet-url "$WALLET_URL" push action bpbenchmarks ram '' -p bpbenchmarks@benchmark -f
+cleos -u "$API_URL" --wallet-url "$WALLET_URL" wallet stop

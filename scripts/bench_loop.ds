@@ -1,0 +1,12 @@
+#!/bin/sh
+#
+# VEX BP Benchmarks loop script. Loop and run the actions with a random sleep.
+#
+
+SCRIPT_DIR="/path/to/bench/scripts"
+ACTIONS_LOG="/path/to/actions.log"
+
+while :; do
+    $SCRIPT_DIR/bench_actions.sh >>$ACTIONS_LOG 2>&1
+    sleep $(shuf -i 12-18 -n 1)
+done
