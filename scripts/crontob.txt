@@ -1,0 +1,19 @@
+SCRIPT_DIR=./
+FILE_PATH="${SCRIPT_DIR}/bench_check.ds"
+LOG_PATH="${SCRIPT_DIR}/log.txt"
+
+#---------------------------------
+# SCHEDULE THIS SCRIPT AS CRON
+#---------------------------------
+if ! crontab -l | grep -q 'bench_check'
+then
+  (crontab -l ; echo "* * * * * ${FILE_PATH} >> ${LOG_PATH} 2>&1") | crontab -
+fi
+
+#---------------------------------
+# SCHEDULE PYTHON IMPORTER AS CRON
+#---------------------------------
+if ! crontab -l | grep -q 'log_to_db'
+then
+  (crontab -l ; echo "* * * * * /usr/bin/flock -n /tmp/log_to_db.lockfile python /root/bpbenchmarks/scripts/log_to_db.py") | crontab -
+fi

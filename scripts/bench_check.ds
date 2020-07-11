@@ -5,5 +5,5 @@
 
 SCRIPT_DIR="/path/to/bench/scripts"
 
-pgrep bench_loop >/dev/null 2>&1 || $SCRIPT_DIR/bench_loop.sh &
+pgrep bench_loop >/dev/null 2>&1 || $SCRIPT_DIR/bench_loop.ds &
 
