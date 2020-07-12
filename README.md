@@ -1,5 +1,5 @@
 # VEX BP Benchmarks
-This is a collection of VEX contracts and utilities in use by the ProIt Lab.
+This is a collection of VEX contracts and utilities in use by the ProItLab.
  
 
 ## Benchmarks
