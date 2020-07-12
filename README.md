@@ -10,10 +10,6 @@ The benchmarks below are VEX contracts which are set on the `bpbenchmarks` accou
 
 This benchmark targets the CPU by calculating Mersenne prime numbers. Calculating primes is an industry standard for measuring CPU performance and it uses code operations that are common in software development.
 
-### RAM Benchmark
-
-This benchmark targets VEX RAM by rapidly writing to and reading from a RAM table. Due to inefficiencies within the VEXCORE software this benchmark is currently CPU heavy and thus we consider it experimental and very similar to the CPU benchmark. As the software performance is improved we expect the results of this benchmark to become more meaningful.
-
 --
 
 #### Disclaimer
